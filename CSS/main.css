@@ -20,7 +20,6 @@
 * {
     box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
 }
 
 body, section, div, header, footer, main, aside, nav, blockquote, p, span {
@@ -172,26 +171,41 @@ header .container {
     padding-bottom: 1rem;
 }
 
+h1 {
+    font-size: 34px;
+    font-weight: 800;
+    margin: auto;
+}
+
+h2 {
+    color: var(--color-gray800);
+    font-size: 28px;
+    text-align: center;
+    font-weight: 800;
+}
+
+h3 {
+    color: var(--color-gray800);
+    font-weight: 800;
+    font-size: 20px;
+}
+
 #showcase {
     background-image: linear-gradient(hsl(225, 75%, 97%, 7%) 0%, hsl(291, 84%, 70%, 6%) 39%, hsl(293, 84%, 61%, 5%) 62%, hsl(239, 84%, 67%, 10%) 100%);
     align-items: center;
     text-align: center;
     padding-bottom: 2rem;
-
 }
 
-h1 {
-    font-size: 34px;
-    font-weight: 800;
-}
-#subheading {
+
+.subheading {
     margin-top: 2rem;
     font-size: 18px;
     font-weight: 400;
     color: var(--color-gray700);
 }
 
-#store-btn {
+.store-btn {
    margin-top: 3rem;
    display: grid;
    grid-row: 1fr 1fr;
@@ -225,16 +239,25 @@ span {
     font-size: 14px;
 }
 
-.iphones {
-    display: none;
+.iphone-container {
+     display: none;
+    /* position: relative;
+    align-items: baseline;
+    overflow: hidden; */
 }
+/*
+.iphone-budget {
+    grid-area: 1 / 1;
+    z-index: 0; 
+    transform: translate(0%, 10%); 
+    }
 
-.heading h2 {
-    color: var(--color-gray800);
-    font-size: 28px;
-    text-align: center;
-    font-weight: 800;
-}
+ .iphone-cards {
+    grid-area: 1 / 1; 
+    z-index: 1; Lägger denna över 
+    transform: translate(60%, 0%); 
+} */
+
 .heading p {
     font-size: 18px;
     text-align: center;
@@ -243,17 +266,14 @@ span {
 #features {
     margin: 1rem;
     margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 
 .app-feature p {
     font-size: 16px;
     color: var(--color-gray700);
 }
-h3 {
-    color: var(--color-gray800);
-    font-weight: 800;
-    font-size: 20px;
-}
+
 
 .app-features {
     display: flex;
@@ -271,11 +291,22 @@ h3 {
     margin: 0;
     margin-bottom: 1rem;
 }
+#how-d-work .container {
+    background-color: var(--color-gray100);
+    height: 915px;
+    padding-top: 2rem;
+    text-align: center;
+}
+
 /* TABLET */
 @media (min-width: 768px) {
 
 .container {
     max-width: 720px;
+}
+#showcase .container {
+    margin-top: 2rem;
+    height: 618px;
 }
 .btn-toggle-switch .label {
     display: block;
@@ -283,7 +314,48 @@ h3 {
 .header .container {
     gap: 3rem;
 }
+h1 {
+    font-size: 44px;
+}
 
+.subheading {
+    color: var(--color-gray700);
+    width: 270px;
+    font-size: 18px;
+    text-align: left;
+    margin-top: 120px;
+}
+
+.store-btn {
+    display: flex;
+    align-items: center;
+}
+
+.app-store {
+    padding: 10px;
+} 
+
+.google-play {
+   padding: 10px;
+} 
+
+/* .iphone-container {
+    border: solid;
+    display: grid;
+    
+    height: 415px;
+    width: 452px;
+}
+.iphone-budget {
+    width: 240px;
+    height: 485px;
+    margin-left: 60px;
+}
+.iphone-cards {
+    width: 244px;
+    height: 493px;
+    margin-left: 60px;
+} */
 }
 
 /* LAPTOP */
