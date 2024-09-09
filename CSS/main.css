@@ -227,6 +227,11 @@ h3 {
     border-radius: 8px;
 }
 
+.iphone-container {
+    display: none;
+    overflow: hidden;
+}
+
 .discover-more {
     margin-top: 3rem;
     align-items: center;
@@ -238,25 +243,6 @@ h3 {
 span {
     font-size: 14px;
 }
-
-.iphone-container {
-     display: none;
-    /* position: relative;
-    align-items: baseline;
-    overflow: hidden; */
-}
-/*
-.iphone-budget {
-    grid-area: 1 / 1;
-    z-index: 0; 
-    transform: translate(0%, 10%); 
-    }
-
- .iphone-cards {
-    grid-area: 1 / 1; 
-    z-index: 1; Lägger denna över 
-    transform: translate(60%, 0%); 
-} */
 
 .heading p {
     font-size: 18px;
@@ -304,58 +290,77 @@ span {
 .container {
     max-width: 720px;
 }
+
 #showcase .container {
-    margin-top: 2rem;
-    height: 618px;
+    height: 580px;
+    margin-top: 1rem;
 }
+
 .btn-toggle-switch .label {
     display: block;
 }
+
 .header .container {
     gap: 3rem;
 }
+
 h1 {
     font-size: 44px;
 }
 
 .subheading {
     color: var(--color-gray700);
-    width: 270px;
+    width: 280px;
     font-size: 18px;
     text-align: left;
-    margin-top: 120px;
+    margin-top: 150px;
 }
 
 .store-btn {
     display: flex;
     align-items: center;
+    justify-content: left;
 }
 
 .app-store {
+    display: flex;
     padding: 10px;
+    width: 126px;
+    height: 44px;
+    justify-content: center;
 } 
 
 .google-play {
+   display: flex;
    padding: 10px;
+   width: 138px;
+   height: 44px;
+   justify-content: center;
 } 
 
-/* .iphone-container {
-    border: solid;
-    display: grid;
-    
-    height: 415px;
+.discover-more {
+    /* display: flex; */
+    float: left;
+}
+.iphone-container {
+    /* border: solid; */
+    display: flex;
     width: 452px;
+    height: 450px;
+    transform: translate(20%, -66%);
 }
+
 .iphone-budget {
-    width: 240px;
-    height: 485px;
-    margin-left: 60px;
+    width: 242px;
+    transform: translate(30%, 12%);
+    z-index: 0;
 }
+
 .iphone-cards {
-    width: 244px;
-    height: 493px;
-    margin-left: 60px;
-} */
+    width: 242px;
+    transform: translate(-12%, 0%);
+    z-index: 1;
+}
 }
 
 /* LAPTOP */
