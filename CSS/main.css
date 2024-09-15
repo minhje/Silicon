@@ -45,11 +45,17 @@ body {
     padding-right: var(--container-padding);
     margin-left: auto;
     margin-right: auto;
+
+    @media (min-width: 768px) {
+            max-width: 720px;
+        }
+
+    @media (min-width:1400px) {
+        max-width: 1320px;
+    }
 }
 
-
 /* ----- NAVBAR ----- */
-
 /* FEATURES LINK */
 a {
     color: var(--color-primary);
@@ -79,12 +85,47 @@ a:hover {
 .btn-primary i {
     margin-right: 0.5rem;
 }
+/* BUTTON STORE */
+.btn-store {
+    background-color: var(--color-gray900);
+    color: var(--color-white);
+    border-radius: 8px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-store:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* CIRCLE BUTTON */
+.btn-circle {
+    height: 44px;
+    width: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--color-gray400);
+    background-color: var(--color-white);
+    color: var(--color-gray900);
+}
+.btn-circle:hover {
+    text-decoration: none;
+}
 
 /* MOBILE MENU */
 .btn-mobile {
     background-color: transparent;
+    color: var(--color-gray900);
     border: none;
     font-size: 2rem;
+
+    @media (min-width: 1400px) {
+        display: none;
+    }
 }
 
 /* TOGGLE SWITCH */
@@ -92,19 +133,30 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-.btn-toggle-switch .label {
-    display: none;
-}
+
+    .label {
+        display: none;
+
+        @media (min-width:768px) {
+            display: block;
+        }
+        @media (min-width: 1400px) {          
+            display: block;
+        }
+    }
+
+
 .toggle-switch {
     position: relative;
     display: inline-block;
     width: 45px;
     height: 25px;
+
+    input {
+        opacity: 0;
+    }
 }
-.toggle-switch input {
-    opacity: 0;
-}
+
 .toggle-switch input:checked +.slider {
     background-color: var(--color-primary);
 }
@@ -115,6 +167,7 @@ a:hover {
     transform: translateX(18px);
     background-color: var(--color-white);
 }
+    
 .toggle-switch .slider {
     position: absolute;
     cursor: pointer;
@@ -141,10 +194,15 @@ a:hover {
 .toggle-switch .slider.round::before {
     border-radius: 50%
 }
+}
 
 /* NAVBAR */
 .navbar {
     display: none;
+
+    @media (min-width: 1400px) {
+            display: block;
+    }
 }
 .nav-link {
     color: var(--color-gray800);
@@ -161,10 +219,11 @@ a:hover {
 }
 #sign-in {
     display: none;
+
+    @media (min-width: 1400px) {
+        display: block;
+    }
 }
-
-
-/* ----- SHOWCASE PAGE ----- */
 header .container {
     display: grid;
     align-items: center;
@@ -172,565 +231,162 @@ header .container {
     gap: 1.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-}
 
-/* HEADING SETTINGS */
-h1 {
-    font-size: 34px;
-    font-weight: 800;
-    margin: auto;
-}
-h2 {
-    color: var(--color-gray900);
-    font-size: 28px;
-    text-align: center;
-    font-weight: 800;
-}
-h3 {
-    color: var(--color-gray900);
-    font-weight: 800;
-    font-size: 20px;
-}
-
-/* SHOWCASE SETTINGS */
-#showcase {
-    background-image: linear-gradient(hsl(225, 75%, 97%, 7%) 0%, hsl(291, 84%, 70%, 6%) 39%, hsl(293, 84%, 61%, 5%) 62%, hsl(239, 84%, 67%, 10%) 100%);
-    align-items: center;
-    text-align: center;
-    padding-bottom: 2rem;
-}
-.subheading {
-    margin-top: 2rem;
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--color-gray700);
-}
-
-/* STORE BUTTONS */
-.store-btn {
-   margin-top: 3rem;
-   display: grid;
-   grid-row: 1fr 1fr;
-   gap: 1rem;
-}
-.app-store {
-    height: 50px;
-    padding-top: 0.5rem;
-    align-content: center;
-    background-color: #131022;
-    border-radius: 8px;
-}
-.google-play {
-    height: 50px;
-    padding-top: 0.5rem;
-    align-content: center;
-    background-color: #131022;
-    border-radius: 8px;
-}
-
-/* IPHONES SHOWCASE */
-.iphone-container {
-    display: none;
-    overflow: hidden;
-}
-
-/* DISCOVER MORE BUTTON */
-.discover-more {
-    margin-top: 3rem;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    gap: 1rem;
-}
-
-span {
-    font-size: 14px;
-}
-
-/* FEATURES PAGE */
-#features {
-    margin: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-}
-
-/* BRANDS SECTION */
-#brands {
-    display: none;
-
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-.brand-box {
-    border: 1px solid var(--color-gray300);
-    border-radius: 8px;
-    padding: 2rem;
-    height: 100px;
-    width: 195px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* HIDE IPHONE IMG */
-.features-iphone {
-    display: none;
-}
-
-/* TEXT SETTINGS */
-.heading p {
-    font-size: 18px;
-    text-align: center;
-    color: var(--color-gray700);
-}
-.app-features p {
-    font-size: 16px;
-    color: var(--color-gray700);
-}
-.text-content {
-    display: flex;
-    flex-direction: column;
-    
-}
-.features-title {
-    margin: 0;
-    margin-bottom: 1rem;
-}
-
-/* FEATURES SETTINGS */
-.app-features {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-top: 3rem;
-}
-
-
-/* --- HOW DOES IT WORK PAGE --- */
-/* LAYOUT */
-#how-d-work {
-    padding-top: 2rem;
-    height: 915px;
-    background-color: var(--color-gray100);
-    text-align: center;
-
-    .container {
-    width: 390px;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: auto 1fr auto;
-    }
-}
-
-/* HEADINGS */
- .heading-2 {
-    grid-column: 1 / 4;
-    grid-row: 1;
-}
-.heading-3 {
-    grid-column: 2;
-    grid-row: 3;
-} 
-.heading-3 p {
-    font-size: 16px;
-    color: var(--color-gray700);
-}
- #step-3 {
-    display: none;
-} 
-#heading-3-laptop {
-    display: none;
-}
-
-/* SCREENS LAYOUT */
-#iphone-frame, #balance-screen {
-    grid-column: 2;
-    grid-row: 2; 
-} 
-.screens {
-    display: grid;
-    grid-column: 2;
-    grid-row: 2;
-}
-.screens img {
-    height: 545px;
-    padding-right: 2rem;
-}
-#transfer-screen, #budget-screen, #cards-screen {
-    display: none;
-}
-
-
-
-/* ----- TABLET ----- */
-@media (min-width: 768px) {
-
-.container {
-    max-width: 720px;
-}
-.btn-toggle-switch .label {
-    display: block;
-}
-.header .container {
-    gap: 3rem;
-}
-
-
-/* ----- SHOWCASE PAGE -----*/
-#showcase { 
-    align-items: center;
-    justify-self: center;
-    margin: auto;
-    height: 618px;  
-    }
-#showcase .container {
-    justify-content: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    height: 618px;
-    width: 720px;
-}
-h1 {
-    display: flex;
-    font-size: 44px;
-    grid-column: 1 / 3;
-    grid-row: 1 / 1;
-    margin-top: 1rem;
-}
-.subheading {
-    grid-column: 1 / 2;
-    grid-row: 2 / 2;
-    color: var(--color-gray700);
-    /* width: 280px; */
-    font-size: 18px;
-    text-align: left;
-    margin-top: 6rem;
-}
-
-/* STORE BUTTONS */
-.store-btn {
-    grid-column: 1 / 2;
-    grid-row: 3 / 3;
-    display: flex;
-    align-items: center;
-}
-.app-store {
-    display: flex;
-    padding: 10px;
-    width: 126px;
-    height: 44px;
-    justify-content: center;
-} 
-.google-play {
-   display: flex;
-   padding: 10px;
-   width: 138px;
-   height: 44px;
-   justify-content: center;
-} 
-
-/* DISCOVER MORE BUTTON */
-.discover-more {
-    grid-column: 1 / 2;
-    grid-row: 4 / 4;
-    justify-content: left;
-}
-
-/* IPHONES SHOWCASE */
-.iphone-container {
-    display: flex;
-    grid-column: 2 / 2;
-    grid-row: 5 / 2;
-    width: 452px;
-}
-.iphone-budget {
-    width: 242px;
-    transform: translate(20%, 10%);
-    z-index: 0;
-    box-shadow: -5px 150px 30px #0000009d;
-}
-.iphone-cards {
-    width: 242px;
-    transform: translate(-20%, 0%);
-    z-index: 1;
-}
-
-
-/* ----- FEATURES PAGE ----- */
-
-/* BRANDS */
-#brands {
-    display: flex;
-}
-.brand-box {
-height: 95px;
-width: 158px;
-}
-#brand-5, #brand-6 {
-    display: none;
-}
-
-/* FEATURES CONTENT LAYOUT */
-.features-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-/* -----  HOW DOES IT WORK PAGE ----- */
-#how-d-work {
-    height: 830px;
-
-    .container {
-        width: 730px;
-    }
- }
-
- /* SCREENS LAYOUT */
-#transfer-screen, #cards-screen {
-    display: block;
-}
-#transfer-screen {
-    grid-column: 3;
-    grid-row: 2;
-}
-#cards-screen, #budget-screen {
-    grid-column: 1;
-    grid-row: 2;
-}
-.screens img {
-    padding-top: 2rem;
-    padding-right: 0;
-    height: 420px;
-}
-
-/* TEXT LAYOUT */
-#step-3 {
-    display: block;
-} 
-.heading-3 {
-    grid-column: 2 / 3;
-    grid-row: 3;
-} 
-
-/* HIDE BUDGET SCREEN */
-.budget-screen {
-    display: none;
-}
-}
-
-
-
-/* ------ LAPTOP ------- */
-@media (min-width: 1400px) {
-
-    /* LAPTOP SETTINGS */
-    .container {
-        max-width: 1320px;
-    }
-    header .container {
-        grid-template-columns: auto 1fr auto auto;
+    @media (min-width: 768px) {
         gap: 3rem;
     }
 
-    /* TOGGLE SWITCH */
-    .btn-toggle-switch .label {
-        display: block;
-    }
-
-    /* NAVBAR */
-    .navbar {
-        display: block;
-    } 
-    #sign-in {
-    display: block;
-    }
-    .btn-mobile {
-        display: none;
-    }
-
-    /* ----- SHOWCASE PAGE ----- */
-    #showcase { 
-        align-items: center;
-        justify-self: center;
-        margin: auto;
-        height: 800px;  
-        }
-    #showcase .container {
-        justify-content: center;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(6, 1fr);
-        height: 800px;
-    }
-
-    /* HEADING */
-    h1 {
-        display: flex;
-        width: 530px;
-        text-align: left;
-        font-size: 56px;
-        grid-column: 1 / 2;
-        grid-row: 2;
-    }
-    .subheading {
-        grid-column: 1 / 2;
-        grid-row: 3;
-        color: var(--color-gray700);
-        width: 530px;
-        font-size: 18px;
-        text-align: left;
-        margin-top: 2rem;
-    }
-    
-    /* STORE BUTTONS */
-    .store-btn {
-        grid-column: 1 / 2;
-        grid-row: 4;
-        align-self: start;
-    }
-    .app-store {
-        width: 180px;
-        height: 52px;
-    }     
-    .google-play {
-       width: 180px;
-       height: 52px;
-    } 
-
-    /* DISCOVER MORE BUTTON */
-    .discover-more {
-        grid-column: 1 / 2;
-        grid-row: 6;
-        justify-content: left;
-        padding-bottom: 2rem;
-    }
-
-    /* IPHONES SHOWCASE */
-    .iphone-container {
-        grid-column: 2;
-        grid-row: 1 / 7;
-        width: 688px;
-    
-    .iphone-budget {
-        width: 380px;
-        transform: translate(17%, 17%);
-        z-index: 0;
-        box-shadow: -5px 220px 50px #0000009d;
-    }    
-    .iphone-cards {
-        width: 400px;
-        transform: translate(-23%, 7%);
-        z-index: 1;
+    @media (min-width: 1400px) {
+        grid-template-columns: auto 1fr auto auto;
+        gap: 3rem;
     }
 }
 
+#hero {
+    background: rgb(99,102,241);
+    background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
+    padding-bottom: 2rem;
+    overflow: hidden;
 
-    /* ----- FEATURES PAGE ----- */
-    .features-laptop {
+    @media (min-width: 768px) {
+       padding-bottom: 0;
+    }
+
+    .container {
         display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto 1fr;
-        padding-top: 7rem;
-        padding-bottom: 7rem;
-    }
-    .features-content {
-        grid-column: 2;
-        grid-row: 2;
-        width: 645px;
-        gap: 1rem;
-        padding-top: 1rem;
-    }
-    .heading {
-        width: 645px;
-        h2 {
-            font-size: 40px;
-            text-align: left;
-            line-height: 10%;
+        gap: 2rem;
+        grid-template-columns: 1fr;
+        grid-template-areas: "headline" "content";
+
+        @media (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "headline headline"
+                                 "content images";
         }
+
+        @media (min-width: 1400px) {
+            grid-template-areas: "headline images"
+                                 "content images";
+            gap: 0;
+        }
+    }
+
+    .headline {
+        grid-area: headline;
+        text-align: center;
+        color: var(--color-gray900);
+        
+
+        h1 {
+            font-size: 34px;
+            font-weight: 800;
+
+            @media (min-width: 768px) {
+                font-size: 45px;
+            }
+            @media (min-width: 1400px) {
+                text-align: left;
+                font-size: 56px;
+                margin-top: 10rem;
+            }
+        }
+
+    }
+
+    .content {
+        grid-area: content;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            text-align: left;
+            width: 90%;
+            margin-top: 3rem;
+        }
+        @media (min-width: 1400px) {
+            margin-top: 0;
+        }
+
         p {
-            font-size: 15.5px;
-            text-align: left;
-            line-height: 160%;
-            padding-top: 1rem;
+            font-size: 18px;
+            margin-bottom: 3rem;
+            color: var(--color-gray700);
         }
-    }
 
-    /* BRANDS */
-    #brand-5, #brand-6 {
-        display: flex;
-    }
-    .brand-box {
-        width: 195px;
-        height: 100px;
-    }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
 
-    /* IPHONES */
-    .features-iphone {
-        display: block;
-        padding-left: 2rem;
-        width: 348px;
-        grid-column: 1;
-        grid-row: 1/3;
-        img {
-        width: 348px;
+            @media (min-width: 768px) {
+                flex-direction: row;
+                
+                .btn-store img {
+                  height: 25px;
+                }
+             }
+
+             @media (min-width: 1400px) {
+                .btn-store img {
+                    height: 100%;
+                }
+             }
+        }
+
+        .discover-more {
+            color: var(--color-gray700);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            font-size: 14px;
+
+            @media (min-width: 768px) {
+               justify-content: flex-start;
+               margin-bottom: 2rem;
+            }
+            @media (min-width: 1400px) {
+                margin-top: 12rem;
+            }
         }
     }
     
 
-
-    /* ----- HOW DOES IT WORK PAGE ----- */
-    #how-d-work {
-        height: 1077px;
-        .container {
-            width: 1185px;
-        }
-    }
-
-    /* HEADING */
-    .heading-2 {
-        font-size: 42px;
-    }
-    .heading-3 {
+    .images {
+        position: relative;
+        grid-area: images;
         display: none;
-    }
-    #heading-3-laptop {
-        display: block;
-        padding-bottom: 3rem;
-        grid-column: 2;
-        grid-row: 3;
-        
-        h3 {
-            font-size: 24px;
-        }
-        p {
-            font-size: 16px;
-            color: var(--color-gray700);
-            line-height: 160%;
-            padding-left: 15rem;
-            padding-right: 15rem;
-        }
-    }
 
-    /* SCREENS */
-    .screens {
-        align-items: center;
-        justify-content: center;
-        gap: 5rem;
-        padding-top: 0;
-        img {
-            padding-top: 0;
-            height: 660px;
+        @media (min-width: 768px) {
+            display: block;
         }
-    }
-    #cards-screen {
-        display: none;
-    }
-    #budget-screen {
-        display: block;
+
+        .iphone-budget {
+            position: absolute;
+            z-index: -10;
+            bottom: 0;
+            right: 130px;
+            width: 70%;
+            box-shadow: -5px 150px 30px #0000009d;
+
+            @media (min-width: 1400px) {
+                width: 60%;
+                right: 230px;
+            }
+
+        }
+        .iphone-cards {
+            position: absolute;
+            z-index: -5;
+            bottom: 0;
+            right: 0;
+            width: 70%;
+
+            @media (min-width: 1400px) {
+                width: 60%;
+            }
+        }
+
     }
 
 }
