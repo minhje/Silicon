@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://kit.fontawesome.com/a576612222.css" crossorigin="anonymous">
+    <meta name="desctiption" content="Silicon banking app">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="CSS/main.css">
     <title>Silicon</title>
 </head>
@@ -15,6 +16,7 @@
      <div class="container">
 
          <a id="logo" href="index.html"><img src="/images/silicon-logo.svg" alt="Silicon logotype"></a>
+         <a id="logo-dark" href="index.html"><img src="/images/silicon-logo-dark.svg" alt="Silicon logotype"></a>
          
          <nav id="main-menu" class="navbar">
             <a class="nav-link" href="#features">Features</a>
@@ -43,11 +45,11 @@
 <section id="hero">
         <div class="container"> 
             <div class="headline">
-            <h1>Manage All Your<br>Money in One App</h1>
+            <h1>Manage All Your Money in One App</h1>
           </div>
 
             <div class="content">
-        <p>We offer you a new generation of the mobile banking.<br>Save, spend & manage money in your pocket.</p>
+        <h2>We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</h2>
         
         <div class=buttons>
             <a class="btn-store" href="#">
@@ -62,7 +64,7 @@
     <span class="btn-circle">
             <i class="fa-solid fa-chevron-down"></i>
         </span>
-            <span>Discover more</span>
+            <span class="btn-text">Discover more</span>
 </a>
 </div>
         
@@ -455,6 +457,8 @@
     </div>
 </section>
 
+
+<!-- SUBSCRIBE SECTION -->
 <section id="subscribe">
     <div class="container">
         <div class="subscribe-content">
@@ -471,7 +475,7 @@
             required placeholder="Your email">
     </div> 
 
-        <a class="btn-subscribe">Subscribe</a>
+        <a class="btn-subscribe" href="#subscribe">Subscribe</a>
     
 
     </div>
@@ -483,5 +487,7 @@
 
 
 </main>
+
+<script src="darkmode.js"></script>
 </body> 
 </html>
