@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="desctiption" content="Silicon banking app">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Silicon</title>
 </head>
 <body>
@@ -13,10 +13,10 @@
     <!-- NAVBAR -->
     <header>
 
+
      <div class="container">
 
-         <a id="logo" href="index.html"><img src="/images/silicon-logo.svg" alt="Silicon logotype"></a>
-         <a id="logo-dark" href="index.html"><img src="/images/silicon-logo-dark.svg" alt="Silicon logotype"></a>
+         <a id="logo" href="index.html"><img class="show-light" src="/images/silicon-logo.svg" alt="Silicon logotype"><img class="show-dark" src="/images/silicon-logo-dark.svg" alt="Silicon logotype"></a>
          
          <nav id="main-menu" class="navbar">
             <a class="nav-link" href="#features">Features</a>
@@ -40,6 +40,7 @@
          </button>
      </div>
     </header>
+    
 <main>
 <!-- HERO -->
 <section id="hero">
@@ -53,12 +54,18 @@
         
         <div class=buttons>
             <a class="btn-store" href="#">
-                <img src="/images/appstore-light.svg" alt="AppStore button">
-            </a>
+                <img class="show-light" src="/images/appstore-light.svg" alt="AppStore button">
+                <img class="show-dark" src="/images/appstore-dark.svg" alt="AppStore button">
+            </a> 
+
             <a class="btn-store" href="#">
-                <img src="/images/googleplay-light.svg" alt="Google Play button">
-            </a>  
+                <img class="show-light" src="/images/googleplay-light.svg" alt="Google Play button">
+                <img class="show-dark" src="/images/googleplay-dark.svg" alt="Google Play button">
+            </a> 
+ 
         </div>
+
+    
 
 <a href="#features" class="discover-more">
     <span class="btn-circle">
