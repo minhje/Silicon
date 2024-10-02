@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="desctiption" content="Silicon banking app">
+    <meta name="description" content="Silicon mobile banking app">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Silicon</title>
@@ -24,7 +24,7 @@
 
          <div id="darkmode-toggle-switch" class="btn-toggle-switch">
             <span class="label">Dark Mode</span>
-            <label for="darkmode-switch" class="toggle-switch">
+            <label for="darkmode-switch" class="toggle-switch" aria-label="Dark mode switch">
                 <input id="darkmode-switch" type="checkbox">
                 <span class="slider round"></span>
             </label>
@@ -76,8 +76,8 @@
 </div>
         
         <div class="images">
-            <img class="iphone-budget" src="images/iphone-budget.svg" width="395px" alt="iPhone with budget forecast" >
-            <img class="iphone-cards" src="images/iphone-cards.svg" width="402px" alt="iPhone with transactions">
+            <img class="iphone-budget" src="images/iphone-budget.svg" width="359" alt="iPhone with budget forecast" >
+            <img class="iphone-cards" src="images/iphone-cards.svg" width="359" alt="iPhone with transactions">
         </div>
         </div>
 </section>
@@ -86,7 +86,7 @@
 <section id="features">
     <div class="container">
 
-        <section id="brands">
+        <div id="brands">
             <div class="container">
             
             <div id="brand-1" class="brand-box">
@@ -108,7 +108,7 @@
             <img src="images/logo-6.svg" alt="Logo ipsum"></div>
 
             </div>
-        </section>
+        </div>
         
 
         <div class="headline">
@@ -245,7 +245,7 @@
            
         </div> 
         
-        <a id="learn-more" href="#" class="btn-learn-more">
+        <a id="learn-more" href="#" class="btn-primary btn-learn-more">
                 <span>Learn more</span>
                 <i class="fa-solid fa-arrow-right"></i>
              </a>
@@ -277,13 +277,12 @@
                 </div>
         </div></div>
 
-        <a id="learn-more" href="#" class="btn-learn-more">
+        <a id="learn-more-2" href="#" class="btn-primary btn-learn-more">
             <span>Learn more</span>
             <i class="fa-solid fa-arrow-right"></i>
          </a>
     </div>
 </div>
- </div>
 
 </section>
 
@@ -295,10 +294,12 @@
         <h2>Clients are Loving Our App</h2>
     </div>
     <div class="testimonial">
-        <img src="images/testimonial.svg" alt="">
+        <img class="show-light" src="images/testimonial.svg" alt="">
+        <img class="show-dark" src="images/testimonial-dark.svg" alt="">
     </div>
     <div class="testimonial-2">
-        <img src="images/testimonial-2.svg" alt="">
+        <img class="show-light" src="images/testimonial-2.svg" alt="">
+        <img class="show-dark" src="images/testimonial-2-dark.svg" alt="">
     </div>
 
     </div>
@@ -376,7 +377,6 @@
                     <span class="btn-circle-up">
                         <i class="fa-solid fa-chevron-up"></i>
                     </span>
-                </label>
                 </label>
                 <div class="accordion-content">
                     <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. 
