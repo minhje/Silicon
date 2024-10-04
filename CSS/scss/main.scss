@@ -1,8 +1,10 @@
-/* FONT IMPORT */
+// IMPORT BUTTON-SETTINGS
 @use "../scss/buttons";
+
+// FONT IMPORT
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-/* ROOTS */
+// ROOTS
 :root {
     --color-gray100: #F3F6FF;
     --color-gray200: #EFF2FC;
@@ -37,7 +39,7 @@
     --container-padding: 1rem;
     --transition-time: all 0.2s;
 }
-
+// DARKMODE FÄRGER & ÄNDRINGAR
 .dark {
     --color-bg: var(--color-gray900);
     --color-bg-secondary: #ffffff04;
@@ -74,6 +76,7 @@
     }
 }
 
+// HIDE & SHOW DEPENDING ON THEME 
 .show-light {
   display: block;
 }
@@ -81,12 +84,12 @@
   display: none;
 }
 
-/* SMOOTH SCROLL */
+// SMOOTH SCROLL 
 html {
     scroll-behavior: smooth; 
 }
 
-/* RESET SETTINGS */
+// RESET SETTINGS
 * {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
@@ -94,7 +97,7 @@ html {
     padding: 0;
 }
 
-/* FONT SETTINGS */
+// FONT SETTINGS
 body {
   background-color: var(--color-bg);
   font-family: "Manrope", sans-serif;
@@ -120,7 +123,7 @@ p {
     color: var(--color-text);
 }
 
-/* CONTAINER SETTINGS */
+// CONTAINER SETTINGS
 .container {
     width: 100%;
     padding-left: var(--container-padding);
@@ -136,19 +139,8 @@ p {
         max-width: 1320px;
     }
 }
-/* FOOTER */
-footer {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--color-gray600);
-    padding: 2rem;
-    text-wrap: balance;
-}
 
-/* ----- NAVBAR ----- */
-/* FEATURES LINK */
+// FEATURES LINK
 a {
     color: var(--color-primary);
     text-decoration: none;
@@ -159,13 +151,14 @@ a {
 } 
 }
 
+// DISCOVERMORE:HOVER
 .discover-more:hover {
     text-decoration: none;
 }
 
-/* NAVBAR */
 
 
+// --- HERO ---
 #hero {
     background: var(--color-bg);
     background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
@@ -176,6 +169,7 @@ a {
        padding-bottom: 0;
     }
 
+    // NAVBAR 
     header {
         .container {
             display: grid;
@@ -247,6 +241,7 @@ a {
         }
     }
 
+    // HERO CONTENT 
     .headline {
         grid-area: headline;
         text-align: center;
@@ -330,7 +325,6 @@ a {
             }
         } 
     }
-    
 
     .images {
         position: relative;
@@ -353,8 +347,8 @@ a {
                 width: 60%;
                 right: 14rem;
             }
-
         }
+
         .iphone-cards {
             position: absolute;
             z-index: -5;
@@ -366,11 +360,11 @@ a {
                 width: 60%;
             }
         }
-
     }
 
 }
 
+// --- FEATURES ---
 #features {
     background-color: var(--color-bg);
     margin-top: 3rem;
@@ -509,6 +503,7 @@ a {
     } 
 }  
 
+// --- HOW DOES IT WORK ---
 #how-does-it-work {
     background-color: var(--color-bg-secondary);
     padding-top: 2rem;
@@ -708,6 +703,7 @@ a {
 
 }
 
+// --- SECOND FEATURES ---
 #features-2 {
  display: block;
  background-color: var(--color-bg);
@@ -774,6 +770,7 @@ a {
  }
 }
 
+// --- REWIEWS ---
 #testimonials {
  display: block;
  background-color: var(--color-bg-secondary);
@@ -797,6 +794,7 @@ a {
 
 }
 
+// --- FAQ ---
 #faq {
     background-color: var(--color-bg);
     
@@ -841,9 +839,9 @@ a {
     
 }
 
-/* Grunden till denna del är gererarad av AI, jag sedan redigerat stylingen */
+/* Grunden till denna del är gererarad av AI, jag har redigerat stylingen */
 .accordion {
-    border: 1px solid var(--color-gray300);
+    border: 1px solid var(--border-color);
     border-radius: 0.5em;
     grid-area: accordion;
     
@@ -855,7 +853,7 @@ a {
 .accordion-item {
     background-color: var(--accordion-background);
     overflow: hidden;
-    border-bottom: 1px solid var(--color-gray300);
+    border-bottom: 1px solid var(--border-color);
     
     
     @media (min-width: 768px) {
@@ -897,11 +895,11 @@ a {
     display: none;
 }
 .accordion-item input[type="checkbox"]:checked ~ .accordion-content {
-    max-height: 400px; 
+    max-height: 500px; 
     padding: 15px 15px;
   }
   .accordion-item input[type="checkbox"]:checked ~ .accordion-title {
-    border-bottom: 1px solid var(--color-gray200);
+    border-bottom: 1px solid var(--border-color);
     
     @media (min-width: 768px) {
       border-bottom: none;
@@ -1014,6 +1012,7 @@ a {
     }
 }
 
+// --- SUBSCRIBE ---
 #subscribe {
     display: flex;
     justify-content: center;
@@ -1130,4 +1129,15 @@ a {
             }
         }
     }
+}
+
+// --- FOOTER ---
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-gray600);
+    padding: 2rem;
+    text-wrap: balance;
 }
